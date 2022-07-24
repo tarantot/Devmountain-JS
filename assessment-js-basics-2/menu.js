@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+var pizza = {
+    name: 'BBQ',
+    price: 4.99,
+    category: 'basic',
+    popularity: 3,
+    rating: 3,
+    tags: ['BBQ', 'meat', 'ham'],
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,6 +50,7 @@
 */
 
 //CODE HERE
+console.log(`Pizza popularity: ${pizza.popularity}`)
 
 
 /*
@@ -53,6 +61,7 @@
 */
 
 //CODE HERE
+console.log(`Pizza tag: ${pizza.tags[1]}`)
 
 
 /*
@@ -63,6 +72,7 @@
 */
 
 //CODE HERE
+console.log(`Special deal! Just today - the pizza price is just ${pizza.price - 2}!`)
 
 
 /*
