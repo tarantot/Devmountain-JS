@@ -17,7 +17,7 @@ function answer (number) {
   return `The result is ${number}`;
 }
 
-multiply(3, 4, output)
+multiply(3, 4, answer)
 
 
 
