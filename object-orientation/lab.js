@@ -119,7 +119,7 @@ const { color, make, model, year } = carDetails;
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
+function greeting (obj) {
   //Code Here
   
   var {firstName, lastName, title} = obj;
@@ -147,6 +147,8 @@ function totalPopulation (object) {
   return utah + california + texas + arizona
 }
 
+const totalPopulation_arrow = (object) => object.utah + object.california + object.texas + object.arizona
+
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -164,6 +166,7 @@ function ingredients (object) {
   return [carb, fat, protein]
 }
 
+const ingredients_arrow = (object) => [object.carb, object.fat, object.protein]
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -375,6 +378,7 @@ const helensInfo = {
 }
 
 //Print helensInfo to see what it looks like, there should be no repeating properties.
+
 console.log(helensInfo)
 //{
 //  firstName: 'Helen',
