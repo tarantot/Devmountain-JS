@@ -193,15 +193,11 @@ const filteredFood = foodArr.filter(function (item) {
 
 //CODE HERE
 var filterByProperty = function (property, number, type) {
-    var res = [];
-    foodArr.filter(item => {
-        if (item.type === 'above' && item.property > number) {
-            res.push(item.property);
-        } else if (item.type === 'below' && item.property < number) {
-            res.push(item.property);
-        }
-    })
-    return res;
+    if (type === 'above') {
+        foodArr.filter(obj => Object.keys(property).some(key => obj[property] > number));
+    } else if (type === 'below') {
+        foodArr.filter(obj => Object.keys(property).some(key => obj[property] < number));
+    }
 }
 
 
@@ -213,3 +209,4 @@ var filterByProperty = function (property, number, type) {
 */
 
 //CODE HERE
+console.log(filterByProperty('price', 6, 'above'))
