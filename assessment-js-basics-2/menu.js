@@ -83,6 +83,7 @@ console.log(`Special deal! Just today - the pizza price is just ${pizza.price - 
 */
 
 //CODE HERE
+console.log(`Item category: ${pizza.category}`)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -98,6 +99,37 @@ console.log(`Special deal! Just today - the pizza price is just ${pizza.price - 
 */
 
 //CODE HERE
+var foodArr = [
+    {
+        name: '4 cheese', 
+        price: 7.35, 
+        category: 'pro', 
+        popularity: 2, 
+        rating: 2, 
+        tags: ['pizza','mozarella', 'gorgonzola', 'parmijano', 'emmantal'],
+    }, {
+        name: 'bologneze',
+        price: 3.25,
+        category: 'basic',
+        popularity: 2,
+        rating: 4,
+        tags: ['noodles', 'pasta', 'ground beef', 'tomato sauce', 'parmijano'],
+    }, {
+        name: 'carbonara',
+        price: 4.15, 
+        category: 'pro',
+        popularity: 3,
+        rating: 4,
+        tags: ['pasta', 'white cream', 'basil', 'parmijano'],
+    }, {
+        name: 'rizotto',
+        price: 4.49,
+        category: 'basic',
+        popularity: 2,
+        rating: 3,
+        tags: ['rice', 'tomato sauce', 'basil'],
+    },
+]
 
 
 
@@ -115,8 +147,9 @@ console.log(`Special deal! Just today - the pizza price is just ${pizza.price - 
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
+const filteredFood = foodArr.filter(function (item) {
+    return item.tags.includes('rice');
+})
 
 
 //////////////////PROBLEM 5////////////////////
@@ -151,7 +184,7 @@ console.log(`Special deal! Just today - the pizza price is just ${pizza.price - 
         if it is, return objects whose value for the given
         property is greater than the `number` passed in
 
-        If the type isn't `below`, return objects whose
+        If the type isn't `below`, return objects whose 
         value for the given property is less than the 
         `number` passed in
     
@@ -159,6 +192,17 @@ console.log(`Special deal! Just today - the pizza price is just ${pizza.price - 
 */
 
 //CODE HERE
+var filterByProperty = function (property, number, type) {
+    var res = [];
+    foodArr.filter(item => {
+        if (item.type === 'above' && item.property > number) {
+            res.push(item.property);
+        } else if (item.type === 'below' && item.property < number) {
+            res.push(item.property);
+        }
+    })
+    return res;
+}
 
 
 /*
