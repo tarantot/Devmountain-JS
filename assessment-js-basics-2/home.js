@@ -76,7 +76,7 @@ const canWeDeliverTwo = function (zipCode) {
         if (code === zipCode) {
             return `You're in our delivery zone!`
         } else {
-            return `Sorry, we can't deliver to that address :-()`
+            return `Sorry, we can't deliver to that address :-(`
         }
     }
 }
