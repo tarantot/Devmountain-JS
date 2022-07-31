@@ -72,14 +72,16 @@ const canWeDeliver = (zipCode) => { return deliveryAreaZipCodes.includes(zipCode
 
 // CODE HERE
 const canWeDeliverTwo = function (zipCode) {
+    var found = null;
     for (code of deliveryAreaZipCodes) {
-        if (code === zipCode) {
-            return `You're in our delivery zone!`
-        } else {
-            return `Sorry, we can't deliver to that address :-(`
+        if (zipCode === code) {
+            return `You're in our delivery zone!`;
         }
     }
-}
+    if (!found) {
+        return `Sorry, we can't deliver to that address :-(`;
+    }
+  }
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -115,7 +117,9 @@ const deals = [
 */
 
 //CODE HERE
+deals[0].title.replace('10', '15')
 deals[0].title = '10% Off!'
+
 
 
 
@@ -133,4 +137,4 @@ deals[0].title = '10% Off!'
 */
 
 //CODE HERE
-deals[1].desc = deals[1].desc.replace('March', 'April').trimStart().trimEnd() 
+deals[1].desc = deals[1].desc.replace('March', 'April').trim() 
