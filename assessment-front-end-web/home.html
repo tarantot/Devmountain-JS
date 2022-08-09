@@ -11,14 +11,30 @@
 	        <li class="crumb"><a href="./home.html">Home</a></li>
 	        <li class="crumb"><a href="./profile.html">Profile</a></li>
 	        <li class="crumb"><a href="./about.html">About</a></li>
+			<li class="crumb"><a href="./extra.html">Extra</a></li>
 	    </ol>
 	</nav>
 
 	<content>
 		<h1>Welcome to this little website.</h1>
-		<!-- insert hello world here -->
+		<p>Hello World</p>
 
-		<img src="https://devmountain.com/wp-content/uploads/2020/10/devmountain-logo3.png">
+		<img src="https://www.freepnglogos.com/uploads/rubber-duck-png/rubber-duck-download-clip-art-0.png"
+		id="rubberduck" alt="rubber duck" width="250">
+
+		<p>A new paragraph to welcome everyone on this website.</p>
+
+		<section>
+			<h1>You are:</h1>
+			<ul id="compliment">
+				<li>You</li>
+				<li>are</li>
+				<li>a</li>
+				<li>good</li>
+				<li>coder!!!</li>
+				<li>but that's not for sure</li>
+			</ul>
+		</section>
 
 		<h2>Contact Us</h2>
 		<form id="contact">
@@ -28,8 +44,17 @@
 			Message:
 			<input type="textarea">
 
-			<input type="submit">
+			<fieldset>
+				<legend>How did you hear about us?</legend>
+				<input type="checkbox" id="Google" name="hear_about_us" value="Google"/>
+				 <label for="Google">Google</label><br>
+				<input type="checkbox" id="friend" name="hear_about_us" value="friend"/>
+				 <label for="friend">From a friend</label><br>
+				<input type="checkbox" id="other" name="hear_about_us" value="other"/>
+				 <label for="other">Other</label><br>
+			</fieldset>
 
+			<input type="submit">
 
 		</form>
 
