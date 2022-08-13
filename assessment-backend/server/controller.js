@@ -1,4 +1,6 @@
-getCompliment: (req, res) => {
+module.exports = {
+
+    getCompliment: (req, res) => {
         const compliments = ["Gee, you're a smart cookie!", "Cool shirt!", "Your Javascript skills are stellar."];
       
         // choose random compliment
@@ -6,9 +8,9 @@ getCompliment: (req, res) => {
         let randomCompliment = compliments[randomIndex];
       
         res.status(200).send(randomCompliment);
-    }
+    },
 
-getFortune: (req, res) => {
+    getFortune: (req, res) => {
         const fortunes = [
             'A feather in the hand is better than a bird in the air.',
             'Allow compassion to guide your decisions.',
@@ -22,3 +24,5 @@ getFortune: (req, res) => {
       
         res.status(200).send(randomFortune);
     }
+
+}
