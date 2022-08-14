@@ -1,0 +1,15 @@
+li {
+    font-family: verdana;
+    padding-right: 7%;
+}
+li span {
+    position: relative;
+    left: -10px;
+}
+ul {
+    padding-right: 5%;
+    list-style: georgian;
+}
+button {
+    border: 2px solid red;
+}

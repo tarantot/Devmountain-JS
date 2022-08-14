@@ -2,12 +2,25 @@
 <html>
   <head>
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
-    <button id="randomFortune">Try your luck and get a fortune!</button>
+    <button id="randomFortune">Try your luck and get a fortune!</button><br><br>
+    <form>
+      <label for="fname">What is your idea? Type it:</label><br>
+      <input type="text" id="idea" name="idea"><br>
+      <input id="submitForm" type="submit" value="Submit"/>
+      <input id="resetForm" type="reset" value="Reset"/><br>
+    </form><br>
+    <button id="updateForm">Update</button>
+  
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
+
+    <h2>Your ideas are:</h2>
+    <ul id="ideas" class=""></ul>
+
   </body>
 </html>
