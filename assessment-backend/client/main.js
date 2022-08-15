@@ -31,7 +31,9 @@ const addIdea = (e) => {
             const data = res.data;
             document.getElementById("ideas").innerHTML = data
             .map(function (idea, index) {
-                return `<li class="row" id="${index}">` + idea + `<button id="deleteForm" onclick="deleteIdea(${index})">Delete</button>`;
+                return `<li class="row" id="${index}">` + idea + '</li>' 
+                + `<button id="alertForm" onclick="alertIdea(${index})">Alert</button>`
+                + `<button id="deleteForm" onclick="deleteIdea(${index})">Delete</button>`;
             })
             .join("");
             //alert(data);
@@ -44,7 +46,9 @@ const updateIdea = () => {
             const data = res.data;
             document.getElementById("ideas").innerHTML = data
             .map(function (idea, index) {
-                return `<li class="row" id="${index}">` + idea + '</li>' + '     ' + `<button id="deleteForm" onclick="deleteIdea(${index})">Delete</button>`;
+                return `<li class="row" id="${index}">` + idea + '</li>'
+                + `<button id="alertForm" onclick="alertIdea(${index})">Alert</button>`
+                + `<button id="deleteForm" onclick="deleteIdea(${index})">Delete</button>`;
             })
             .join("");
     });
@@ -60,6 +64,13 @@ const deleteIdea = (index) => {
     alert('The idea has been deleted!')
 };
 
+const alertIdea = (index) => {
+    axios.get(`http://localhost:4000/api/idea/${index}`)
+        .then(res => {
+            const data = res.data;
+            alert(data);
+    });
+};
 
 complimentBtn.addEventListener('click', getCompliment)
 fortuneBtn.addEventListener('click', getFortune)

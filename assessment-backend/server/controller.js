@@ -77,4 +77,10 @@ module.exports = {
       res.status(200).send(ideasDatabase);
     },
 
+    alertIdea: (req, res) => {
+      const index = req.params.index;
+    
+      res.status(200).send(ideasDatabase[index]);
+    },
+
 }
