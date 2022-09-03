@@ -1,68 +1,41 @@
--- 1.
-CREATE TABLE PERSON (
-	id serial NOT NULL primary key,
-	name VARCHAR(100),
-    age INT,
-	height INTEGER,
-    city VARCHAR(100),
-	favorite_color VARCHAR(100)
-);
+/* #1 */
+CREATE TABLE person ( person_id SERIAL PRIMARY KEY, name VARCHAR(200), age INTEGER, height INTEGER, city VARCHAR(200), favorite_color VARCHAR(200));
 
+/* #2 */
+INSERT INTO person ( name, age, height, city, favorite_color ) VALUES ( 'First Last', 21, 182, 'City', 'Color' );
 
--- 2.
-INSERT INTO PERSON (name, age, height, city, favorite_color)
-VALUES
-('John Doe', 31, 183, 'Ottawa', 'blue'),
-('Richard Roe', 56, 145, 'Oklahoma City', 'pink'),
-('Jane Doe', 45, 166, 'Witchita', 'yellow'),
-('Rane Roe', 24, 191, 'Richmond', 'transparent'),
-('Joe Biden', 78, 177, 'Washington DC', 'black');
+/* #3 */
+SELECT * FROM person ORDER BY height DESC;
 
+/* #4 */
+SELECT * FROM person ORDER BY height ASC;
 
--- 3.
-SELECT * FROM PERSON ORDER BY height DESC;
+/* #5 */
+SELECT * FROM person ORDER BY age DESC;
 
+/* #6 */
+SELECT * FROM person WHERE age > 20;
 
--- 4.
-SELECT * FROM PERSON ORDER BY height;
+/* #7 */
+SELECT * FROM person WHERE age = 18;
 
+/* #8 */
+SELECT * FROM person WHERE age < 20 OR age > 30;
 
--- 5.
-SELECT * FROM PERSON ORDER BY age DESC;
+/* #9 */
+SELECT * FROM person WHERE age != 27;
 
+/* #10 */
+SELECT * FROM person WHERE favorite_color != 'red';
 
--- 6.
-SELECT * FROM PERSON WHERE age > 20;
+/* #11 */
+SELECT * FROM person WHERE favorite_color != 'red' AND favorite_color != 'blue';
 
+/* #12 */
+SELECT * FROM person WHERE favorite_color = 'orange' OR favorite_color = 'green';
 
--- 7.
-SELECT * FROM PERSON WHERE age = 18;
+/* #13 */
+SELECT * FROM person WHERE favorite_color IN ( 'orange', 'green', 'blue' );
 
-
--- 8.
-SELECT * FROM PERSON WHERE age <20 OR age > 30;
-
-
--- 9.
-SELECT * FROM PERSON WHERE age != 27;
-
-
--- 10.
-SELECT * FROM PERSON WHERE NOT favorite_color = 'red';
-
-
--- 11.
-SELECT * FROM PERSON WHERE NOT favorite_color = 'red' AND NOT favorite_color = 'blue';
-SELECT * FROM PERSON WHERE favorite_color NOT IN ('red', 'blue');
-
-
--- 12.
-SELECT * FROM PERSON WHERE favorite_color IN ('orange', 'green');
-
-
--- 13.
-SELECT * FROM PERSON WHERE favorite_color IN ('orange', 'green', 'blue');
-
-
--- 14.
-SELECT * FROM PERSON WHERE favorite_color IN ('yellow', 'purple');
+/* #14 */
+SELECT * FROM person WHERE favorite_color IN ( 'yellow', 'purple' )
