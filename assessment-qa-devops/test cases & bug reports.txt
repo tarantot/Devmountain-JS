@@ -1,0 +1,55 @@
+Defects
+
+1. 
+Pre-conditions: the game is launched
+Action: choose 2 botcards, click "Duel!", and win
+
+Expected result: "Wins" value becomes +1
+Actual result: "Losses" value becomes +1
+
+Failure pinpoint: row 66 of the server.js file
+
+
+2. 
+Pre-conditions: the game is launched
+Action: click the "See All Bots" button
+
+Expected result: see all bots
+Actual result: 400 Error bad request
+
+Failure pinpoint: row 25 of the server.js file
+
+
+3. 
+
+
+Test Cases
+
+1. Game sanity
+Pre-conditions: the game is launched
+Action: choose 2 botcards 
+Expected result: the button "Duel" shows up
+
+
+2. To win
+Pre-conditions: the game is launched
+Action: choose 2 botcards with the maximum health and click "Duel"
+Expected result: win the game, "Wins" value becomes +1
+
+
+3. To lose
+Pre-conditions: the game is launched
+Action: choose 2 botcards with the minimum health and click "Duel"
+Expected result: lose the game, "Losses" value becomes +1
+
+
+4. Choose more than 2 botcards for a game
+Pre-conditions: the game is launched
+Action: choose 2 botcards and click "Add to Duel" for any other one
+Expected result: popup message "You can only choose two bots!"
+
+
+5. Remove botcards from the list of selected ones
+Pre-conditions: the game is launched, and at least one botcard has been added
+Action: click "Remove from Duo"
+Expected result: the botcard has been removed from the selected ones and back in the array of available options
